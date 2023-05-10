@@ -25,7 +25,7 @@ header nav div.menu {
 
 header nav div.menu a { 
   text-decoration: none;
-  color: aliceblue;
+  color: white;
   background: black;
   padding: .5rem;
   border-radius: 4px;
@@ -50,7 +50,7 @@ main {
 }
 
 main section {
-  background-color: lightblue;
+  background-color: rgb(88, 25, 172);
   margin: 10px;
 }
 
@@ -66,33 +66,22 @@ main section div div {
   min-height: 10px;
 }
 
-footer {
-  border: 1px solid black;
-}
-
-/* ---------------------------------------------------------------------------- */
-/* GRID */
-
-main section.grid>div {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-}
-
-main section.grid>div>div:last-of-type {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-/* ---------------------------------------------------------------------------- */
-/* FLEX */
-
-main section.flex>div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 main section.flex>div>div {
   width: 33.333%;
+}
+
+.gale-ft {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.gale-ft img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: .3s;
+}
+
+.gale-ft:hover img:not(:hover) {
+  transform: scale(.8);
 }
